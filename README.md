@@ -16,7 +16,9 @@ To clarify, given Bayes' theorem, $P(h|e) = [P(e|h) * P(h)] / P(e)$ we call:
 + $P(h)$ the prior on the hypothesis.
 + $P(e|h)$ the likelihood.
 + $P(h|e)$ the posterior probability.
+
 In the norming study,  we collected information on the naive priors on the hypotheses as well as on the likelihood and the posterior probability. 
+
 + *The naive priors on the hypotheses*: In a group of 100 lawyers and engineers, how many of them are engineers? 
 + *The naive likelihood*: Given a group of 100 engineers, how many of them are into mathematical puzzles?
 + *The naive posteriors*: Consider a group of 100 lawyers and engineers. It turns out that all of these people are into mathematical puzzles. How many of them are engineers?
