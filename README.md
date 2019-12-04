@@ -12,7 +12,7 @@ The results was that subjects produced essentially the same probability judgment
 
 But how do we know that for people the description isn't _so strongly_ in favor of the engineer-hypothesis that this pressure _rationally_ bumps the priors in the bayesian computation? To wit, if for instance we are asked to whom the description "has antennas" corresponds in a set of 99 earthlings and 1 alien, answering "the alien" would not mean disregarding the priors. To assess this, we are replicating the experiment by trying to model the data through naive probabilities collected in an already performed norming study. 
 
-To clarify, given Bayes' theorem, $ P(h|e) = [P(e|h) * P(h)] / P(e)$ we call:
+To clarify, given Bayes' theorem, `` P(h|e) = [P(e|h) * P(h)] / P(e) we call:
 + 
 + 
 In the norming study,  we collected information on the naive priors on the hypotheses as well as on the likelihood and the posterior probability. 
