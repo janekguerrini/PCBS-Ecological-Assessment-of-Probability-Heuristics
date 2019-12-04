@@ -33,7 +33,7 @@ Kahneman and Tversky concluded from their experiment that people's heuristics ha
 **Table of Contents**
 
 - [Experimental conditions] (#experimental-conditions) 
- - [Creating the materials](#creating-the-materials)
+   - [Creating the materials](#creating-the-materials)
 - [Instructions] (#instructions)
 - [Creating the scripts for the different conditions] (#scripts)
 - [Demographics] (#demographics)
