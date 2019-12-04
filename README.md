@@ -6,9 +6,9 @@ PCBS Project: Ecological assessment of probability heuristics
 - [Introduction](Introduction)
 - [Hypothesis](#experiment)
 - [Setting up the materials](#materials)
-- [Instructions] (#instructions)
-- [Experiment] (#experiment)
-- [Demographics] (]demographics)
+- [Instructions](#instructions)
+- [Experiment](#experiment)
+- [Demographics](]demographics)
 - [Experience and Class Review](#experience-and-class-review)
 - [Reference](#reference)
 
