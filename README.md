@@ -29,19 +29,4 @@ In this experiment, we will ask participants a question of the type of the origi
 Kahneman and Tversky concluded from their experiment that people's heuristics has nothing to do with computing probabilities. Rather, it is about typicality. Our hypothesis is that it _is_ in fact about probabilities, it is just not about the posteriors. To wit, we submit that people are engaging in confirmatory reasoning. There are many measures of confirmation, all of which can be mathematically fully determined by some combination of emasures collected in our norming study. Our hypothesis is that people's responses to this experiment will be fully formalizable in terms of operations on those probabilities. 
 
 
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-**Table of Contents**
 
-- [Experimental conditions] (#experimental-conditions) 
-   - [Creating the materials](#creating-the-materials)
-- [Instructions] (#instructions)
-- [Creating the scripts for the different conditions] (#scripts)
-- [Demographics] (#demographics)
-  
-
-<!-- markdown-toc end -->
-## Experimental conditions
-## Creating the materials
-## Instructions
-## Creating the scripts for the different conditions
-## Demographics
