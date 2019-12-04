@@ -1,5 +1,20 @@
 PCBS Project: Ecological assessment of probability heuristics
 ============================================================================================
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [Introduction](Introduction)
+- [Hypothesis](#experiment)
+- [Setting up the materials](#materials)
+- [Instructions] (#instructions)
+- [Experiment] (#experiment)
+- [Demographics] (]demographics)
+- [Experience and Class Review](#experience-and-class-review)
+- [Reference](#reference)
+
+<!-- markdown-toc end -->
+
+
 ## Introduction 
 Kahneman&Tversky (1973) provided some important insight into how people deal with probability tasks in which they have to integrate prior probabilities with specific evidence. One of the most famous experiments of that study, "Lawyers and Engineers" (henceforth L&E) was constructed as follows. People were given a description corresponding to an invidivual which was randomly chosen from a sample of 100 people. There were two experimental conditions:
 + One group of subjects was told that the sample consisted of 70 engineers and 30 lawyers.
@@ -28,5 +43,15 @@ In this experiment, we will ask participants a question of the type of the origi
 ## Hypothesis ##
 Kahneman and Tversky concluded from their experiment that people's heuristics has nothing to do with computing probabilities. Rather, it is about typicality. Our hypothesis is that it _is_ in fact about probabilities, it is just not about the posteriors. To wit, we submit that people are engaging in confirmatory reasoning. There are many measures of confirmation, all of which can be mathematically fully determined by some combination of emasures collected in our norming study. Our hypothesis is that people's responses to this experiment will be fully formalizable in terms of operations on those probabilities. 
 
+## Setting up the materials##
 
+## Instructions ##
+
+## Experiment ##
+
+## Demographics ##
+
+## Experience and Class Review ##
+
+## Reference ##
 
