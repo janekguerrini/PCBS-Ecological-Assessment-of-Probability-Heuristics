@@ -68,12 +68,13 @@ What is the probability that he is a `hypothesis 1`?
 We have six conditions, corresponding to different priors feeded to the participants:
 
 | | `first prior`| none | 10 | 30 | 50 | 70 | 90 | 
+|---|---|---|---|---|---|---|---|
 |`second prior`| |||||||
-|none||||||||
-|90||||||||
-|70||||||||
-|50||||||||
-|30||||||||
+|none|Group 1|||||||
+|90||Group 2||||||
+|70|||Group 3|||||
+|50||||Group 4||||
+|30|||||Group 5|||
 |10||||||||
 
 ## Setting up the materials ##
