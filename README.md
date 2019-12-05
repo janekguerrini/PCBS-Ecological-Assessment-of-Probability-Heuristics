@@ -53,12 +53,28 @@ The stimuli are constructed as follows: we have six pairs of real-world professi
 | Name of the scenario  | hypothesis 1 | hypothesis 2 | description/evidence |
 | ------------- | ------------- | ------------- | ------------- |
 | `airplane`  | flight attendant | commercial airline pilot | is over 35 years old |
-| `<medicine>`  | nurse  | doctor  |  has taken advanced biology courses |
-| `<soccer>`  | elite soccer player  | elite soccer coach  | spends a lot of time studying soccer tactics  |
-|  `<university>` | student  | professor  | 	spends a lot of time at the university  |
-| `<church>`  | congregant  | pastor | spends one afternoon a week reading the bible  |
-| `<politics>`  | voter  | politician | is well informed about topical issues and policy making  |
-| `<lawyers&engineers>`  | lawyer  | engineer | 	loves solving Rubik’s cubes  |
+| `medicine`  | nurse  | doctor  |  has taken advanced biology courses |
+| `soccer`  | elite soccer player  | elite soccer coach  | spends a lot of time studying soccer tactics  |
+|  `university` | student  | professor  | 	spends a lot of time at the university  |
+| `church`  | congregant  | pastor | spends one afternoon a week reading the bible  |
+| `politics`  | voter  | politician | is well informed about topical issues and policy making  |
+| `lawyers&engineers`  | lawyer  | engineer | 	loves solving Rubik’s cubes  |
+
+Participants see sentences of the form:
+> «“Consider an individual drawn from a group of X `hypothesis 1` and Y `hypothesis 2`.
+Now you learn that this individual `evidence`.
+What is the probability that he is a `hypothesis 1`?
+
+We have six conditions, corresponding to different priors feeded to the participants:
+| | `first prior`| none | 10 | 30 | 50 | 70 | 90 | 
+|---|---|---|---|---|---|---|---|
+|`second prior`| |||||||
+|90||||||||
+|70||||||||
+|50||||||||
+|30||||||||
+|10||||||||
+|none||||||||
 
 ## Setting up the materials ##
 
