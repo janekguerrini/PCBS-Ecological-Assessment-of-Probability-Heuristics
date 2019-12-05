@@ -1,19 +1,5 @@
 PCBS Project: Ecological assessment of probability heuristics
 ============================================================================================
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-**Table of Contents**
-
-- [Introduction](Introduction)
-- [Hypothesis](#experiment)
-- [Description of the stimuli](#description of the stimuli)
-- [Setting up the materials](#materials)
-- [Instructions](#instructions)
-- [Experiment](#experiment)
-- [Demographics](]demographics)
-- [Experience and Class Review](#experience-and-class-review)
-- [Reference](#reference)
-
-<!-- markdown-toc end -->
 
 
 ## Introduction 
