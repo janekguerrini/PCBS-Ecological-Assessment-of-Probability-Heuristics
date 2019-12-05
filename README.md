@@ -18,7 +18,7 @@ PCBS Project: Ecological assessment of probability heuristics
 
 
 ## Introduction ##
-Kahneman&Tversky (1973) provided some important insight into how people deal with probability tasks in which they have to integrate prior probabilities with specific evidence. One of the most famous experiments of that study, "Lawyers and Engineers" (henceforth L&E) was constructed as follows. People were given a description corresponding to an invidivual which was randomly chosen from a sample of 100 people. There were two experimental conditions:
+Kahneman & Tversky (1973) provided some important insight into how people deal with probability tasks in which they have to integrate prior probabilities with specific evidence. One of the most famous experiments of that study, "Lawyers and Engineers" (henceforth L&E) was constructed as follows. People were given a description corresponding to an invidivual which was randomly chosen from a sample of 100 people. There were two experimental conditions:
 + One group of subjects was told that the sample consisted of 70 engineers and 30 lawyers.
 + The other group of subjects was told that the sample consisted of 30 engineers and 70 lawyers.
 The description were like the following:
@@ -37,13 +37,13 @@ To clarify, given Bayes' theorem, $P(h|e) = [P(e|h) * P(h)] / P(e)$ we call:
 In the norming study,  we collected information on the naive priors on the hypotheses as well as on the likelihood and the posterior probability. 
 
 + *The naive priors on the hypotheses*: In a group of 100 lawyers and engineers, how many of them are engineers? 
-+ *The naive likelihood*: Given a group of 100 engineers, how many of them are into mathematical puzzles?
-+ *The naive posteriors*: Consider a group of 100 lawyers and engineers. It turns out that all of these people are into mathematical puzzles. How many of them are engineers?
++ *The naive likelihood*: Given a group of 100 engineers, how many of them love solving Rubik's cubes?
++ *The naive posteriors*: Consider a group of 100 lawyers and engineers. It turns out that all of these people love solving Rubik's cubes. How many of them are engineers?
 
 In this experiment, we will ask participants a question of the type of the original Tversky and Kahneman L&E, to see what computation combining the components collected in the norming study, if any, best predicts their responses.  
 
 ## Hypothesis ##
-Kahneman and Tversky concluded from their experiment that people's heuristics has nothing to do with computing probabilities. Rather, it is about typicality. Our hypothesis is that it _is_ in fact about probabilities, it is just not about the posteriors. To wit, we submit that people are engaging in confirmatory reasoning. There are many measures of confirmation, all of which can be mathematically fully determined by some combination of emasures collected in our norming study. Our hypothesis is that people's responses to this experiment will be fully formalizable in terms of operations on those probabilities. 
+Kahneman and Tversky concluded from their experiment that people's heuristics has nothing to do with computing probabilities. Rather, it is about typicality. Our hypothesis is that it _is_ in fact about probabilities, it is just not about the posteriors. To wit, we submit that people are engaging in confirmatory reasoning. There are many measures of confirmation, all of which can be mathematically fully determined by some combination of measures collected in our norming study. Our hypothesis is that people's responses to this experiment will be fully formalizable in terms of operations on those probabilities. 
 
 The experiment will be run on Mechanical Turk and programmed in JavaScript language.
 
@@ -68,10 +68,10 @@ What is the probability that he is a `hypothesis 1`?
 
 We have six conditions, corresponding to different priors feeded to the participants:
 
-| | `first prior`| none | 10 | 30 | 50 | 70 | 90 | 
+| | `first prior`| no given prior | 10 | 30 | 50 | 70 | 90 | 
 |---|---|---|---|---|---|---|---|
 |`second prior`| |||||||
-|none||Group 1||||||
+|no given prior||Group 1||||||
 |90|||Group 2|||||
 |70||||Group 3||||
 |50|||||Group 4|||
