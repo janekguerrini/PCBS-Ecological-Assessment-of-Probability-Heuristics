@@ -70,12 +70,12 @@ We have six conditions, corresponding to different priors feeded to the particip
 | | `first prior`| none | 10 | 30 | 50 | 70 | 90 | 
 |---|---|---|---|---|---|---|---|
 |`second prior`| |||||||
+|none||||||||
 |90||||||||
 |70||||||||
 |50||||||||
 |30||||||||
 |10||||||||
-|none||||||||
 
 ## Setting up the materials ##
 
