@@ -61,7 +61,7 @@ The stimuli are constructed as follows: we have six pairs of real-world professi
 | `lawyers&engineers`  | lawyer  | engineer | 	loves solving Rubik’s cubes  |
 
 Participants see sentences of the form:
-> «“Consider an individual drawn from a group of X `hypothesis 1` and Y `hypothesis 2`.
+> Consider an individual drawn from a group of `first prior` `hypothesis 1` and `second prior` `hypothesis 2`.
 Now you learn that this individual `evidence`.
 What is the probability that he is a `hypothesis 1`?
 
