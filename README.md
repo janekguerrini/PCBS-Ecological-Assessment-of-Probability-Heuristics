@@ -1,8 +1,23 @@
 PCBS Project: Ecological assessment of probability heuristics
 ============================================================================================
 
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
 
-## Introduction 
+  - [Introduction](#Introduction)
+  - [Hypothesis](#Hypothesis)
+  - [Description of the stimuli](#description-of-the-stimuli)
+  - [Setting up the materials](#setting-up-the-materials)
+  - [Instructions](#instructions)
+  - [Experiment](#experiment)
+  - [Demographics](#demographics)
+  - [Experience and Class Review](#experience-and-class-review)
+  - [Reference](#reference)
+
+<!-- markdown-toc end -->
+
+
+## Introduction ##
 Kahneman&Tversky (1973) provided some important insight into how people deal with probability tasks in which they have to integrate prior probabilities with specific evidence. One of the most famous experiments of that study, "Lawyers and Engineers" (henceforth L&E) was constructed as follows. People were given a description corresponding to an invidivual which was randomly chosen from a sample of 100 people. There were two experimental conditions:
 + One group of subjects was told that the sample consisted of 70 engineers and 30 lawyers.
 + The other group of subjects was told that the sample consisted of 30 engineers and 70 lawyers.
@@ -32,7 +47,7 @@ Kahneman and Tversky concluded from their experiment that people's heuristics ha
 
 The experiment will be run on Mechanical Turk and programmed in JavaScript language.
 
-## Description of the stimuli 
+## Description of the stimuli ##
 
 The stimuli are constructed as follows: we have six pairs of real-world professions and a description associated with each pair.
 
@@ -62,6 +77,10 @@ We have six conditions, corresponding to different priors feeded to the particip
 |50|||||Group 4|||
 |30||||||Group 5||
 |10|||||||Group 6|
+
+So summing up, every participant sees:
++ all the profession pairs with the corresponding evidence.
++ only one combination of priors corresponding to her/his group. 
 
 ## Setting up the materials ##
 
