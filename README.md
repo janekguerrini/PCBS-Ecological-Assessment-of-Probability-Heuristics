@@ -50,6 +50,7 @@ The experiment will be run on Mechanical Turk and programmed in JavaScript langu
 
 The stimuli are constructed as follows: we have six pairs of real-world professions and a description associated with each pair.
 
+
 | Name of the scenario  | hypothesis 1 | hypothesis 2 | description/evidence |
 | ------------- | ------------- | ------------- | ------------- | ------------- | 
 | `airplane`  | Content Cell  |Content Cell  | Content Cell  |
@@ -59,6 +60,7 @@ The stimuli are constructed as follows: we have six pairs of real-world professi
 | `<>`  | Content Cell  |Content Cell  | Content Cell  |
 | `<>`  | Content Cell  |Content Cell  | Content Cell  |
 | `<>`  | Content Cell  |Content Cell  | Content Cell  |
+
 
 airplane	flight attendant	commercial airline pilot	is over 35 years old	spends much of his/her working time on board of an airplane
 medicine	nurse	doctor	has taken advanced biology courses	is often at the hospital overnight
