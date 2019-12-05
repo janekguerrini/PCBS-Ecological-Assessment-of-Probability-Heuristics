@@ -5,7 +5,7 @@ PCBS Project: Ecological assessment of probability heuristics
 
 - [Introduction](Introduction)
 - [Hypothesis](#experiment)
-- [Description of the stimuli] (#description of the stimuli)
+- [Description of the stimuli](#description of the stimuli)
 - [Setting up the materials](#materials)
 - [Instructions](#instructions)
 - [Experiment](#experiment)
@@ -50,25 +50,15 @@ The experiment will be run on Mechanical Turk and programmed in JavaScript langu
 
 The stimuli are constructed as follows: we have six pairs of real-world professions and a description associated with each pair.
 
-<br>
 | Name of the scenario  | hypothesis 1 | hypothesis 2 | description/evidence |
 | ------------- | ------------- | ------------- | ------------- | ------------- | 
-| `airplane`  | Content Cell  |Content Cell  | Content Cell  |
-| `<>`  | Content Cell  |Content Cell  | Content Cell  |
-| `<>`  | Content Cell  |Content Cell  | Content Cell  |
-|  `<>` | Content Cell  |Content Cell  | Content Cell  |
-| `<>`  | Content Cell  |Content Cell  | Content Cell  |
-| `<>`  | Content Cell  |Content Cell  | Content Cell  |
-| `<>`  | Content Cell  |Content Cell  | Content Cell  |
-
-
-airplane	flight attendant	commercial airline pilot	is over 35 years old	spends much of his/her working time on board of an airplane
-medicine	nurse	doctor	has taken advanced biology courses	is often at the hospital overnight
-soccer	elite soccer player	elite soccer coach	spends a lot of time studying soccer tactics	is extremely well paid
-university	student	professor	spends a lot of time at the university	spends a lot of time on homework
-church	congregant	pastor	spends one afternoon a week reading the bible	sings hymns in church
-politics	voter	politician	is well informed about topical issues and policy making	spends a lot of time thinking about who to vote
-T&K	lawyer	engineer	loves solving Rubik’s cubes	is engaged in political and social issues
+| `airplane`  | flight attendant | commercial airline pilot | is over 35 years old |
+| `<medicine>`  | nurse  | doctor  |  has taken advanced biology courses |
+| `<soccer>`  | elite soccer player  | elite soccer coach  | spends a lot of time studying soccer tactics  |
+|  `<university>` | student  | professor  | 	spends a lot of time at the university  |
+| `<church>`  | congregant  | pastor | spends one afternoon a week reading the bible  |
+| `<politics>`  | voter  | politician | is well informed about topical issues and policy making  |
+| `<lawyers&engineers>`  | lawyer  | engineer | 	loves solving Rubik’s cubes  |
 
 ## Setting up the materials ##
 
