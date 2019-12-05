@@ -46,7 +46,7 @@ Kahneman and Tversky concluded from their experiment that people's heuristics ha
 
 The experiment will be run on Mechanical Turk and programmed in JavaScript language.
 
-## Description of the stimuli and the materials
+## Description of the stimuli 
 
 The stimuli are constructed as follows: we have six pairs of real-world professions and a description associated with each pair.
 
@@ -68,7 +68,6 @@ What is the probability that he is a `hypothesis 1`?
 We have six conditions, corresponding to different priors feeded to the participants:
 
 | | `first prior`| none | 10 | 30 | 50 | 70 | 90 | 
-|---|---|---|---|---|---|---|---|
 |`second prior`| |||||||
 |none||||||||
 |90||||||||
