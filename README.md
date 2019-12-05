@@ -51,7 +51,7 @@ The experiment will be run on Mechanical Turk and programmed in JavaScript langu
 The stimuli are constructed as follows: we have six pairs of real-world professions and a description associated with each pair.
 
 | Name of the scenario  | hypothesis 1 | hypothesis 2 | description/evidence |
-| ------------- | ------------- | ------------- | ------------- | ------------- | 
+| ------------- | ------------- | ------------- | ------------- |
 | `airplane`  | flight attendant | commercial airline pilot | is over 35 years old |
 | `<medicine>`  | nurse  | doctor  |  has taken advanced biology courses |
 | `<soccer>`  | elite soccer player  | elite soccer coach  | spends a lot of time studying soccer tactics  |
