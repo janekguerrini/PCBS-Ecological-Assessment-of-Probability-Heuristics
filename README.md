@@ -50,8 +50,8 @@ The experiment will be run on Mechanical Turk and programmed in JavaScript langu
 
 The stimuli are constructed as follows: we have six pairs of real-world professions and a description associated with each pair.
 | Name of the scenario  | hypothesis 1 | hypothesis 2 | description/evidence |
-| ------------- | ------------- |
-| `<airplane>`  | Content Cell  |Content Cell  | Content Cell  |
+| ------------- | ------------- | ------------- | ------------- | ------------- | 
+| `airplane`  | Content Cell  |Content Cell  | Content Cell  |
 | `<>`  | Content Cell  |Content Cell  | Content Cell  |
 | `<>`  | Content Cell  |Content Cell  | Content Cell  |
 |  `<>` | Content Cell  |Content Cell  | Content Cell  |
