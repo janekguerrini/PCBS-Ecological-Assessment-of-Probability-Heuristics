@@ -1,4 +1,4 @@
-PCBS Project: Ecological assessment of probability heuristics
+PCBS Project: Replication of Tversky and Kahneman's "Lawyers and Engineer"s
 ============================================================================================
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
