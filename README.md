@@ -1,4 +1,4 @@
-PCBS Project: Replication of Tversky and Kahneman's "Lawyers and Engineer"s
+PCBS Project: Replication of Tversky and Kahneman's "Lawyers and Engineers"
 ============================================================================================
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
@@ -142,11 +142,6 @@ var materials = [
 
 
 ```
-// Consent form: this is recovered from the resources folder.
-var consent = {
-  type: "consent-dec"
-};
-
 // Instructions
 var instructions_html = ["<h1>Welcome!</h1><p>In this experiment, you will read one or more sentences and then be asked some questions about them. For example:</p><p class=\"example\">Consider an individual drawn from a group of 100 butchers and fishmongers.</p><p class=\"example target\">Now you learn that this individual weigh products before selling them.</p><p> What is the probability that this individual is a nutcher? </p><p>Click <i>Next</i> for another example.</p>"];
 
