@@ -31,11 +31,13 @@ There is extensive evidence that the result is partly determined by the triggeri
 
 We hypothesise that along the human origin of the description, also the long, full-fledged psychological description triggers interpretive processes. People pragmatically interpret the description as being a hint by the experimenter. To get rid of this confound, we replicate the study with one-line descriptions that are not said to be psychologically determined.
 
-The experiment will be run on Mechanical Turk and programmed in JavaScript language.
+The experiment will be run on Mechanical Turk and programmed in JavaScript language with the jspsych library. [Jspsych](https://www.jspsych.org) is a JavaScript library for running behavioral experiments in a web browser created by Josh de Leeuw. The library provides a flexible framework for building a wide range of laboratory-like experiments that can be run online.
 
 ## Description of the stimuli ##
 
 The stimuli are constructed as follows: we have six pairs of real-world professions and a description associated with each pair.
+
+**Table 1**
 
 
 | Name of the scenario  | hypothesis 1 | hypothesis 2 | description/evidence |
@@ -55,6 +57,9 @@ What is the probability that he is a `hypothesis 1`?
 
 We have six conditions, corresponding to different priors feeded to the participants:
 
+**Table 2**
+
+
 | | `first prior`| no given prior | 10 | 30 | 50 | 70 | 90 | 
 |---|---|---|---|---|---|---|---|
 |`second prior`| |||||||
@@ -68,20 +73,6 @@ We have six conditions, corresponding to different priors feeded to the particip
 Summing up, every participant sees:
 + all the profession pairs with the corresponding evidence.
 + only one combination of priors corresponding to her/his group. 
-
-## Main html file and overall structure
-
-We set up the central html file that loads the JsPsych plugins we need for our code and loads different components of the experiment, which are reported in the next sections: 
-* the **materials** contain pairs of professions and the corresponding description that will be feeded to the script.
-* the **instructions** script
-* the main script
-* the **demographics**
-
-```
-Code here 
-
-```
-
 
 ## Setting up the materials ##
 
@@ -169,7 +160,7 @@ var instructions = {
 };
 ```
 
-## Experiment ##
+## Experiment (main script) ##
 
 
 
@@ -233,7 +224,7 @@ var demographics_page1 = {
                      "commercial airline pilot"
                    ]
         },
-        { prompt: "<p>This what a test about general knowledge of professional categories. It is important for us to know whether you have any technical knowledge or informed opinion about these categories. This could mean for example having a close friend/family member who works in the field or in a closely related field, or your regularly reading specific news articles concerning the field.</p>",
+        { prompt: "<p>This was a test about general knowledge of professional categories. It is important for us to know whether you have any technical knowledge or informed opinion about these categories. This could mean for example having a close friend/family member who works in the field or in a closely related field, or your regularly reading specific news articles concerning the field.</p>",
           options: [ "university student",
                      "university professor",
                      "voter",
@@ -290,6 +281,70 @@ var demographics_page2 = {
   data: { questionId: "demo2" }
 };
 ```
+## Main html file and dispatcher ##
+
+We set up a central html files that loads the jspsych plugins we need for our code and loads the different parts of the experiment. 
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta author="Janek Guerrini">
+    <title>Experiment on reasoning</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/black-tie/jquery-ui.min.css"
+          rel="stylesheet" type="text/css">
+
+
+    <script src="http://web-risc.ens.fr/~jguerrini/experiments"></script>
+
+    <script src="http://web-risc.ens.fr/~jguerrini/experiments/jsPsych-6.1.0/jspsych.js"></script>
+    <script src="http://web-risc.ens.fr/~jguerrini/experiments/jsPsych-6.1.0/plugins/jspsych-survey-text.js"></script>
+    <script src="http://web-risc.ens.fr/~jguerrini/experiments/jsPsych-6.1.0/plugins/jspsych-instructions.js"></script>
+    <script src="http://web-risc.ens.fr/~jguerrini/experiments/jsPsych-6.1.0/plugins/jspsych-survey-multi-select.js"></script>
+
+
+    <link href="http://web-risc.ens.fr/~jguerrini/experiments/jsPsych-6.1.0/css/jspsych.css" rel="stylesheet">
+
+  // restyling?
+
+  </head>
+  <body>
+    <div id="jspsych-target"></div>
+  </body>
+
+  <script src="materials.js"></script>
+  <script src="other_questions.js"></script>
+  <script src="script-1.js"></script>
+
+</html>
+
+```
+
+We set up the dispatcher with the URL that calls the html file, by passing in through the query string the variables that determine the participant condition and which we need in our main script:
+ ```
+<?php
+// Get a global counter from server and update counter
+$counter_file = "/tmp/dispatch-counter-eco-1";
+$counter_val = file_get_contents($counter_file);
+file_put_contents($counter_file, $counter_val + 1);
+
+// Possible redirections
+$redirects = array("?first_prior=90&second_prior=10"
+                   "?first_prior=70&second_prior=30"
+                   "?first_prior=50&second_prior=50"
+                   "?first_prior=30&second_prior=70"
+                   "?first_prior=10&second_prior=90";
+                   
+// Redirect user to the next link
+header("Location: " . $redirects[$counter_val % count($redirects)]);
+?>
+
+```
+
+
 ## Experience and Class Review ##
 
 ## Reference ##
