@@ -69,6 +69,20 @@ Summing up, every participant sees:
 + all the profession pairs with the corresponding evidence.
 + only one combination of priors corresponding to her/his group. 
 
+## Main html file and overall structure
+
+We set up the central html file that loads the JsPsych plugins we need for our code and loads different components of the experiment, which are reported in the next sections: 
+* the **materials** contain pairs of professions and the corresponding description that will be feeded to the script.
+* the **instructions** script
+* the main script
+* the **demographics**
+
+```
+Code here 
+
+```
+
+
 ## Setting up the materials ##
 
 We set up the battery of materials that we will feed the script.   
@@ -83,7 +97,7 @@ var materials = [
     h1_predicate: "a student",
     h2_plural: "professors",
     h2_predicate: "a professor",
-    e1: "spends a lot of time at the university",
+    e: "spends a lot of time at the university",
     id: "university"
   },
   {h1_plural: "voters",
@@ -156,6 +170,8 @@ var instructions = {
 ```
 
 ## Experiment ##
+
+
 
 ## Demographics ##
 ```
