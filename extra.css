@@ -1,0 +1,13 @@
+.question {
+    font-weight: bold;
+}
+
+.example {
+    max-width: 600px;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.target {
+    font-weight: bold;
+}
