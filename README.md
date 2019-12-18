@@ -23,11 +23,11 @@ Kahneman & Tversky (1973) provided some important insight into how people deal w
 + The other group of subjects was told that the sample consisted of 30 engineers and 70 lawyers.
 The description were like the following:
 > «Jack is a 45-year-old man. He is married and has four children. He is generally conservative, careful, and ambitious. He shows no interest in political and social issues and spends most of his free time on his many hobbies which include home carpentry, sailing, and mathematical puzzles.»
-Then, subjects were asked to write down the probability that the subject was one of the 30 (or 70, respectively) engineers. 
+Then, subjects were asked to write down the probability that the subject was one of the 30 (or 70, respectively) engineers.
 
-The results was that subjects produced essentially the same probability judgments. From this, Tversky and Kahneman concluded that subjects evaluated the likelihood that a specific description belonged to an engineer rather than to a lawyer by the degree to which this description was representative of the two stereotypes, with little or no regard for the prior probabilities of the categories. 
+The results was that subjects produced essentially the same probability judgments. From this, Tversky and Kahneman concluded that subjects evaluated the likelihood that a specific description belonged to an engineer rather than to a lawyer by the degree to which this description was representative of the two stereotypes, with little or no regard for the prior probabilities of the categories.
 
-There is extensive evidence that the result is partly determined by the triggering of pragmatic interpretive processes.Schwarz, Strack, Hilton & Naderer (1991), for instance, showed that the so-called representativeness effect is smaller when participants are told that the description is generated and randomly picked by a computer. 
+There is extensive evidence that the result is partly determined by the triggering of pragmatic interpretive processes.Schwarz, Strack, Hilton & Naderer (1991), for instance, showed that the so-called representativeness effect is smaller when participants are told that the description is generated and randomly picked by a computer.
 
 We hypothesise that along the human origin of the description, also the long, full-fledged psychological description triggers interpretive processes. People pragmatically interpret the description as being a hint by the experimenter. To get rid of this confound, we replicate the study with one-line descriptions that are not said to be psychologically determined.
 
@@ -60,7 +60,7 @@ We have six conditions, corresponding to different priors feeded to the particip
 **Table 2**
 
 
-| | `first prior`| no given prior | 10 | 30 | 50 | 70 | 90 | 
+| | `first prior`| no given prior | 10 | 30 | 50 | 70 | 90 |
 |---|---|---|---|---|---|---|---|
 |`second prior`| |||||||
 |no given prior||Group 1||||||
@@ -72,7 +72,7 @@ We have six conditions, corresponding to different priors feeded to the particip
 
 Summing up, every participant sees:
 + all the profession pairs with the corresponding evidence.
-+ only one combination of priors corresponding to her/his group. 
++ only one combination of priors corresponding to her/his group.
 
 ## Setting up the materials ##
 
@@ -80,7 +80,7 @@ We set up the battery of materials that we will feed the script.
 
 ```
 //Add materials to this array. The materials here are
-//inflected in all the ways we need them to inflect in 
+//inflected in all the ways we need them to inflect in
 //order to piece together the questions in the script.
 
 var materials = [
@@ -96,7 +96,7 @@ var materials = [
     h2_plural: "politicians",
     h2_predicate: "a politician",
     e: "is well-informed about topical issues and policy-making",
-   
+
     id: "politics"
   },
   {h1_plural: "nurses",
@@ -112,7 +112,7 @@ var materials = [
  h2_plural: "elite soccer coaches",
  h2_predicate: "an elite soccer coach",
  e: "spends a lot of time studying soccer tactics",
- 
+
  id: "soccer"
 },
  {h1_plural: "congregants",
@@ -120,7 +120,7 @@ var materials = [
    h2_plural: "pastors",
    h2_predicate: "a pastor",
    e: "spends one afternoon a week reading the bible",
-  
+
    id: "church"
  },
  {h1_plural: "lawyers",
@@ -128,7 +128,7 @@ var materials = [
    h2_plural: "engineers",
    h2_predicate: "an engineer",
    e: "loves solving Rubik's cubes",
-  
+
    id: "T&K"
  },
  {h1_plural: "flight attendants",
@@ -136,7 +136,7 @@ var materials = [
    h2_plural: "commercial airline pilots",
    h2_predicate: "a commercial airline pilot",
    e: "is over 35 years old",
-  
+
    id: "airplane"
  }
 
@@ -283,7 +283,7 @@ var demographics_page2 = {
 ```
 ## Main html file and dispatcher ##
 
-We set up a central html files that loads the jspsych plugins we need for our code and loads the different parts of the experiment. 
+We set up a central html files that loads the jspsych plugins we need for our code and loads the different parts of the experiment.
 
 ```
 <!DOCTYPE html>
@@ -323,7 +323,7 @@ We set up a central html files that loads the jspsych plugins we need for our co
 
 ```
 
-We set up the dispatcher with the URL that calls the html file, by passing in through the query string the variables that determine the participant condition and which we need in our main script:
+We set up the dispatcher with the URL that calls the html file, by passing in through the query string the variables that determine the participant condition and which we need in our main script.
  ```
 <?php
 // Get a global counter from server and update counter
@@ -337,15 +337,21 @@ $redirects = array("?first_prior=90&second_prior=10"
                    "?first_prior=50&second_prior=50"
                    "?first_prior=30&second_prior=70"
                    "?first_prior=10&second_prior=90";
-                   
+
 // Redirect user to the next link
 header("Location: " . $redirects[$counter_val % count($redirects)]);
 ?>
 
 ```
+This does not work on the GitHub folder, but it will be useful for when the experiment will be on the lab the server. To take the experiment from the Github folder, click on one of the following paths (one per condition; it's always the same file, but with different URL variables):
+* Condition 1: main.html?first_prior=90&second_prior=10
+* Condition 2: main.html?first_prior=70&second_prior=30
+* Condition 3: main.html?first_prior=50&second_prior=50
+* Condition 4: main.html?first_prior=70&second_prior=30
+* Condition 5: main.html?first_prior=90&second_prior=10
+* Condition 6: main.html?first_prior=null&second_prior=null
 
 
 ## Experience and Class Review ##
 
 ## Reference ##
-
