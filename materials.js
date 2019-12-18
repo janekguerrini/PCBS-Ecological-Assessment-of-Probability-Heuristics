@@ -7,7 +7,7 @@ var materials = [
     h1_predicate: "a student",
     h2_plural: "professors",
     h2_predicate: "a professor",
-    e1: "spends a lot of time at the university",
+    e: "spends a lot of time at the university",
     id: "university"
   },
   {h1_plural: "voters",
