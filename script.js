@@ -38,7 +38,9 @@ for (i = 0; i < materials.length; i++) {
 var theTimeline = new Array;
 theTimeline.push(instructions);
 theTimeline = theTimeline.concat(question_probability);
-
+theTimeline.push(demographics_original);
+theTimeline.push(demographics_page1);
+theTimeline.push(demographics_page2);
 
 
 jsPsych.init({
