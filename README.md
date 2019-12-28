@@ -345,11 +345,11 @@ header("Location: " . $redirects[$counter_val % count($redirects)]);
 ```
 This does not work on the GitHub folder, but it will be useful for when the experiment will be on the lab server. To take the experiment from the Github folder, click on one of the following paths (one per condition; it's always the same file, but with different URL variables):
 * [Condition 1](main.html?first_prior=90&second_prior=10)
-* [Condition 2] (main.html?first_prior=70&second_prior=30)
-* [Condition 3] (main.html?first_prior=50&second_prior=50)
-* [Condition 4] (main.html?first_prior=70&second_prior=30)
-* [Condition 5] (main.html?first_prior=90&second_prior=10)
-* [Condition 6] (main.html?first_prior=null&second_prior=null)
+* [Condition 2](main.html?first_prior=70&second_prior=30)
+* [Condition 3](main.html?first_prior=50&second_prior=50)
+* [Condition 4](main.html?first_prior=70&second_prior=30)
+* [Condition 5](main.html?first_prior=90&second_prior=10)
+* [Condition 6](main.html?first_prior=null&second_prior=null)
 
 
 ## Experience and Class Review ##
