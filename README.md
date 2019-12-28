@@ -78,7 +78,7 @@ Summing up, every participant sees:
 
 We set up the battery of materials that we will feed the script.   
 
-```
+``` javascript
 //Add materials to this array. The materials here are
 //inflected in all the ways we need them to inflect in
 //order to piece together the questions in the script.
@@ -146,7 +146,7 @@ var materials = [
 ## Instructions ##
 
 
-```
+```javascript
 // Instructions
 var instructions_html = ["<h1>Welcome!</h1><p>In this experiment, you will read one or more sentences and then be asked some questions about them. For example:</p><p class=\"example\">Consider an individual drawn from a group of 100 butchers and fishmongers.</p><p class=\"example target\">Now you learn that this individual weigh products before selling them.</p><p> What is the probability that this individual is a nutcher? </p><p>Click <i>Next</i> for another example.</p>"];
 
@@ -165,7 +165,7 @@ var instructions = {
 
 
 ## Demographics ##
-```
+```javascript
 // Demographic questionnaire
 var demographics_original = {
   type: "survey-dropdown",
@@ -285,7 +285,7 @@ var demographics_page2 = {
 
 We set up a central html files that loads the jspsych plugins we need for our code and loads the different parts of the experiment.
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -324,7 +324,7 @@ We set up a central html files that loads the jspsych plugins we need for our co
 ```
 
 We set up the dispatcher with the URL that calls the html file, by passing in through the query string the variables that determine the participant condition and which we need in our main script.
- ```
+ ```php
 <?php
 // Get a global counter from server and update counter
 $counter_file = "/tmp/dispatch-counter-eco-1";
@@ -343,15 +343,16 @@ header("Location: " . $redirects[$counter_val % count($redirects)]);
 ?>
 
 ```
-This does not work on the GitHub folder, but it will be useful for when the experiment will be on the lab the server. To take the experiment from the Github folder, click on one of the following paths (one per condition; it's always the same file, but with different URL variables):
-* Condition 1: [main.html?first_prior=90&second_prior=10](main.html?first_prior=90&second_prior=10)
-* Condition 2: main.html?first_prior=70&second_prior=30
-* Condition 3: main.html?first_prior=50&second_prior=50
-* Condition 4: main.html?first_prior=70&second_prior=30
-* Condition 5: main.html?first_prior=90&second_prior=10
-* Condition 6: main.html?first_prior=null&second_prior=null
+This does not work on the GitHub folder, but it will be useful for when the experiment will be on the lab server. To take the experiment from the Github folder, click on one of the following paths (one per condition; it's always the same file, but with different URL variables):
+* [Condition 1](main.html?first_prior=90&second_prior=10)
+* [Condition 2] (main.html?first_prior=70&second_prior=30)
+* [Condition 3] (main.html?first_prior=50&second_prior=50)
+* [Condition 4] (main.html?first_prior=70&second_prior=30)
+* [Condition 5] (main.html?first_prior=90&second_prior=10)
+* [Condition 6] (main.html?first_prior=null&second_prior=null)
 
 
 ## Experience and Class Review ##
 
 ## Reference ##
+Kahneman, D., & Tversky, A. (1973). On the psychology of prediction. Psychological review, 80(4), 237.
