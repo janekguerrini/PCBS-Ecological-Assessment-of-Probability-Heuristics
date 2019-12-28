@@ -349,7 +349,7 @@ This does not work on the GitHub folder, but it will be useful for when the expe
 * [Condition 3](main.html?first_prior=50&second_prior=50)
 * [Condition 4](main.html?first_prior=70&second_prior=30)
 * [Condition 5](main.html?first_prior=90&second_prior=10)
-* [Condition 6](main.html?first_prior=null&second_prior=null)
+* [Condition 6](main.html?first_prior= &second_prior= )
 
 
 ## Experience and Class Review ##
