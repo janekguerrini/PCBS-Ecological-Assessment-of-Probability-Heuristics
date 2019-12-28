@@ -9,8 +9,9 @@ $redirects = array("?first_prior=90&second_prior=10"
                    "?first_prior=70&second_prior=30"
                    "?first_prior=50&second_prior=50"
                    "?first_prior=30&second_prior=70"
-                   "?first_prior=10&second_prior=90";
-                   
+                   "?first_prior=10&second_prior=90"
+                   "?first_prior= &second_prior= ";
+
 // Redirect user to the next link
 header("Location: " . $redirects[$counter_val % count($redirects)]);
 ?>

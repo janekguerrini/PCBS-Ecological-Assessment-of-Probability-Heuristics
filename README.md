@@ -150,7 +150,7 @@ var materials = [
 // Instructions
 var instructions_html = ["<h1>Welcome!</h1><p>In this experiment, you will read one or more sentences and then be asked some questions about them. For example:</p><p class=\"example\">Consider an individual drawn from a group of 100 butchers and fishmongers.</p><p class=\"example target\">Now you learn that this individual weigh products before selling them.</p><p> What is the probability that this individual is a nutcher? </p><p>Click <i>Next</i> for another example.</p>"];
 
-instructions_html.push("<p>Here's another example of the kind of question we may ask you.</p><p class=\"example\"> Consider an individual drawn from a group of 100 firefighters and police officers.</p><p class=\"example target\">?</p><p class=\"example target\"> Now you learn that this individual likes order and tidiness. </p><p> What is the probability that this individual is a police officer? You will be given a small textbox to type in your guess. <p><p> That's all the examples we have for you, click <i>Next</i> to begin the experiment.</p>");
+instructions_html.push("<p>Here's another example of the kind of question we may ask you.</p><p class=\"example\"> Consider an individual drawn from a group of 100 firefighters and police officers.</p><p class=\"example target\"></p><p class=\"example target\"> Now you learn that this individual likes order and tidiness. </p><p> What is the probability that this individual is a police officer? You will be given a small textbox to type in your guess. <p><p> That's all the examples we have for you, click <i>Next</i> to begin the experiment.</p>");
 
 var instructions = {
   type: 'instructions',
@@ -161,14 +161,68 @@ var instructions = {
 ```
 
 ## Experiment (main script) ##
+```javascript
+var theSubject = jsPsych.randomization.randomID(10);
+jsPsych.data.addProperties({ subjectId: theSubject,
+                             condition: 1 });
 
+// Read materials and shuffle them
+materials = jsPsych.randomization.shuffle(materials);
+
+// Set up variables we'll need for loops, and empty blocks to be filled
+// in with questions
+var i;
+var first_prior;
+var second_prior;
+var question_probability = new Array;
+
+//  pairs of priors of the different conditions are taken from the different
+// URLs of the dispatcher. The getURLVariable function returns the value of a
+// variable passed in through the query string.See documentation at
+// https://www.jspsych.org/core_library/jspsych-data/#jspsychdatageturlvariable
+var first_prior = jsPsych.data.getURLVariable('first_prior')
+var second_prior = jsPsych.data.getURLVariable('second_prior')
+
+// Stimulus sentence: gets the priors from the URL of the main html file, loads
+//the content from the materials battery.
+for (i = 0; i < materials.length; i++) {
+  question_probability.push(
+    { type: "survey-text",
+      preamble: "<p class=\"preamble\">Consider an individual randomly drawn from a group of "+ first_prior +" " + materials[i].h1_plural + " and "+ second_prior +" " + materials[i].h2_plural + ".</p>" + "Now you learn that this individual " + materials[i].e + ".</p>",
+      questions: [
+        { prompt: "<p class=\"question\">What's the probability that this person is a " + materials[i].h1_predicate + "?</p>",
+          columns: 5,
+          rows: 1,
+          value: ""}],
+        data: { questionId: "question_probability" + materials[i].id }
+  });
+};
+
+
+var theTimeline = new Array;
+theTimeline.push(instructions);
+theTimeline = theTimeline.concat(question_probability);
+theTimeline.push(demographics_original);
+theTimeline.push(demographics_page1);
+theTimeline.push(demographics_page2);
+
+
+jsPsych.init({
+  timeline: theTimeline,
+  show_progress_bar: true,
+  on_finish: function(data){  jsPsych.data.displayData('csv');
+
+  }
+});
+
+```
 
 
 ## Demographics ##
 ```javascript
 // Demographic questionnaire
 var demographics_original = {
-  type: "survey-dropdown",
+  type: "survey-multi-choice",
   preamble: "<h1>Demographic questionnaire <br>(page 1 of 3)</h1><p>Please answer the following demographic questions.  Your payment will not be affected by your answers.</p>",
   questions: [
     { prompt: "What is your college-level background in philosophy, linguistics, and logic?",
@@ -224,7 +278,7 @@ var demographics_page1 = {
                      "commercial airline pilot"
                    ]
         },
-        { prompt: "<p>This was a test about general knowledge of professional categories. It is important for us to know whether you have any technical knowledge or informed opinion about these categories. This could mean for example having a close friend/family member who works in the field or in a closely related field, or your regularly reading specific news articles concerning the field.</p>",
+        { prompt: "<p>This what a test about general knowledge of professional categories. It is important for us to know whether you have any technical knowledge or informed opinion about these categories. This could mean for example having a close friend/family member who works in the field or in a closely related field, or your regularly reading specific news articles concerning the field.</p>",
           options: [ "university student",
                      "university professor",
                      "voter",
@@ -252,7 +306,7 @@ var demographics_page1 = {
     };
 
 var demographics_page2 = {
-  type: "survey-dropdown",
+  type: "survey-multi-select",
   preamble: "<h1>Demographic questionnaire<br>(page 3 of 3)</h1>",
   questions: [
     { prompt: "What is the highest degree or level of school you have completed?",
@@ -283,7 +337,7 @@ var demographics_page2 = {
 ```
 ## Main html file and dispatcher ##
 
-We set up a central html files that loads the jspsych plugins we need for our code and loads the different parts of the experiment.
+We set up a central html file that loads the jspsych plugins we need for our code and loads the different parts of the experiment. The jspsych plugins are publicly available. I uploaded them to my public html folder in order to not take up space in the GitHub folder.
 
 ```html
 <!DOCTYPE html>
@@ -302,6 +356,7 @@ We set up a central html files that loads the jspsych plugins we need for our co
 
     <script src="http://web-risc.ens.fr/~jguerrini/experiments/jsPsych-6.1.0/jspsych.js"></script>
     <script src="http://web-risc.ens.fr/~jguerrini/experiments/jsPsych-6.1.0/plugins/jspsych-survey-text.js"></script>
+        <script src="http://web-risc.ens.fr/~jguerrini/experiments/jsPsych-6.1.0/plugins/jspsych-survey-multi-choice.js"></script>
     <script src="http://web-risc.ens.fr/~jguerrini/experiments/jsPsych-6.1.0/plugins/jspsych-instructions.js"></script>
     <script src="http://web-risc.ens.fr/~jguerrini/experiments/jsPsych-6.1.0/plugins/jspsych-survey-multi-select.js"></script>
 
@@ -317,13 +372,14 @@ We set up a central html files that loads the jspsych plugins we need for our co
 
   <script src="materials.js"></script>
   <script src="other_questions.js"></script>
-  <script src="script-1.js"></script>
+  <script src="script.js"></script>
 
 </html>
 
 ```
 
 We set up the dispatcher with the URL that calls the html file, by passing in through the query string the variables that determine the participant condition and which we need in our main script.
+
  ```php
 <?php
 // Get a global counter from server and update counter
@@ -341,9 +397,9 @@ $redirects = array("?first_prior=90&second_prior=10"
 // Redirect user to the next link
 header("Location: " . $redirects[$counter_val % count($redirects)]);
 ?>
-
 ```
-This does not work on the GitHub folder, but it will be useful for when the experiment will be on the lab server. To take the experiment from the Github folder, click on one of the following paths (one per condition; it's always the same file, but with different URL variables):
+
+This will not work on the GitHub folder, but will be useful for when the experiment will be on the lab server. To take the experiment from the Github folder, click on one of the following paths (one per condition; it's always the same file, but with different URL variables passed in):
 * [Condition 1](main.html?first_prior=90&second_prior=10)
 * [Condition 2](main.html?first_prior=70&second_prior=30)
 * [Condition 3](main.html?first_prior=50&second_prior=50)
