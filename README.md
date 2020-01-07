@@ -409,6 +409,11 @@ This will not work on the GitHub folder, but will be useful for when the experim
 
 
 ## Experience and Class Review ##
+I had very little coding experience prior to this class. I knew a bit of Python and Javascript, but I had no idea how to solve coding problems. This has been the main thing I learned in this class. Other helpful things I learned: how to use git, how to efficiently get help through slack.
+
+I found it very useful to learn by trial and error in the bigger project, while that method was less clear to me when at the beginning we solved small coding exercises: sometimes I just didn't know where to start, and when that happens one does not progress at all. Getting input from the instructors on the way one looks for help when stuck in coding was certainly one of the main accomplishments of this course for me.
+
+As to what missed, not really a lot, apart from the absence of structure that comes physiologically with a course that involves students of so different coding levels. One way to give this structure  might be to give weekly assignments, maybe partly linked to the final projects, starting from the very beginning of the semester, and on which all students get regular  input (not only if they ask for it). This would nudge students into having a more gradual workflow and asking more for help, both on slack and during the class. I personally find asking for help the only real way to progress, as coding alone too often leaves one lost in useless Stackoverflow threads, difficult documentation, incomprehensible error message decipherment, and white sheet panic.
 
 ## Reference ##
 Kahneman, D., & Tversky, A. (1973). On the psychology of prediction. Psychological review, 80(4), 237.
